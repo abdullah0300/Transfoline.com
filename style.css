@@ -183,7 +183,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 100px;
 }
 
 .scrolled-offset {
@@ -1911,5 +1911,180 @@ section {
     float: none;
     text-align: center;
     padding: 2px 0;
+  }
+}
+
+
+
+/* Default styles */
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.whatsapp-button a {
+  display: block;
+  padding: 10px;
+  border-radius: 50%;
+  /* background-color: white; */
+  /* WhatsApp green color */
+  position: relative;
+}
+
+.whatsapp-button a::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 50%;
+  border: 3px solid rgba(37, 211, 102, 0.5);
+  /* WhatsApp green color with transparency */
+  animation: ping 1.5s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+  /* Animation effect */
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.whatsapp-button img {
+  width: 60px;
+  /* Adjust the size of the icon as needed */
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  #whatsapp-button {
+    bottom: 30px;
+    right: 10px;
+  }
+
+  .whatsapp-button a {
+    padding: 8px;
+  }
+
+  .whatsapp-button img {
+    width: 50px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #whatsapp-button {
+    bottom: 20px;
+    right: 15px;
+  }
+
+  .whatsapp-button a {
+    padding: 6px;
+  }
+
+  .whatsapp-button img {
+    width: 40px;
+  }
+}
+
+
+
+
+/* call styles */
+
+
+
+#call-button {
+  position: fixed;
+  bottom: 130px;
+  right: 20px;
+  z-index: 999;
+}
+
+.call-button a {
+  display: block;
+  padding: 10px;
+  border-radius: 50%;
+  /* background-color: white; */
+  /* call green color */
+  position: relative;
+}
+
+
+.call-button a::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 50%;
+  border: 3px solid orangered;
+  /* call green color with transparency */
+  animation: ping 1.5s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+  /* Animation effect */
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.call-button img {
+  width: 60px;
+  /* Adjust the size of the icon as needed */
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  #call-button {
+    bottom: 130px;
+    right: 10px;
+  }
+
+  .call-button a {
+    padding: 8px;
+  }
+
+  .call-button img {
+    width: 50px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #call-button {
+    bottom: 100px;
+    right: 15px;
+  }
+
+  .call-button a {
+    padding: 6px;
+  }
+
+  .call-button img {
+    width: 40px;
   }
 }
